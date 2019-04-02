@@ -96,22 +96,22 @@ $client->environments();
 ```json
 [
     {
-        prim_uid: "10361",
-        name: "Default",
-        push_document_url: "",
-        push_notification_url: "https://push.domain.tld/notifications/",
-        push_input_request_url: "https://push.domain.tld/input_request/",
-        ui_redirect_url: "",
-        default_environment: true
+        "prim_uid": "10361",
+        "name": "Default",
+        "push_document_url": "",
+        "push_notification_url": "https://push.domain.tld/notifications/",
+        "push_input_request_url": "https://push.domain.tld/input_request/",
+        "ui_redirect_url": "",
+        "default_environment": true
     },
     {
-        prim_uid: "10362",
-        name: "Env",
-        push_document_url: "",
-        push_notification_url: "https://push.domain.tld/notifications/",
-        push_input_request_url: "https://push.domain.tld/input_request/",
-        ui_redirect_url: "",
-        default_environment: false
+        "prim_uid": "10362",
+        "name": "Env",
+        "push_document_url": "",
+        "push_notification_url": "https://push.domain.tld/notifications/",
+        "push_input_request_url": "https://push.domain.tld/input_request/",
+        "ui_redirect_url": "",
+        "default_environment": false
     }
 ]
 ```
@@ -122,8 +122,7 @@ $client->timezones();
 ```json
 [
     "Africa/Abidjan",
-    "Africa/Accra",
-    ...
+    "Africa/Accra"
 ]
 ```
 #####5.Date Formats
@@ -148,7 +147,7 @@ $client->createEnvironment([
 ```
 ```json
 {
-    prim_uid: 10432
+    "prim_uid": 10432
 }
 ```
 #####7.Update Environment
@@ -160,7 +159,7 @@ $client->updateEnvironment([
 ```
 ```json
 {
-    success: true
+    "success": true
 }
 ```
 #####8.Delete Environment
@@ -171,7 +170,7 @@ $client->deleteEnvironment([
 ```
 ```json
 {
-    success: true
+    "success": true
 }
 ```
 #####9.List Customers Accounts
@@ -199,9 +198,9 @@ $client->createCustomer([
 ```
 ```json
 {
-    prim_uid: 6684,
-    customer_secret: "b3cjpcy8",
-    access_token: "o1zhz0yzrbx3i5v65j20a751rrg6tyji"
+    "prim_uid": 6684,
+    "customer_secret": "b3cjpcy8",
+    "access_token": "o1zhz0yzrbx3i5v65j20a751rrg6tyji"
 }
 ```
 #####11.Update Customer
@@ -214,7 +213,7 @@ $client->updateCustomer([
 ```
 ```json
 {
-    success: true
+    "success": true
 }
 ```
 #####12.Delete Customer
@@ -226,7 +225,7 @@ $client->deleteCustomer([
 ```
 ```json
 {
-    success: true
+    "success": true
 }
 ```
 #####12.Deactivate Customer
@@ -238,7 +237,7 @@ $client->deactivateCustomer([
 ```
 ```json
 {
-    success: true
+    "success": true
 }
 ```
 #####12.Activate Customer
@@ -250,7 +249,7 @@ $client->activateCustomer([
 ```
 ```json
 {
-    success: true
+    "success": true
 }
 ```
 #####13.Get Customer Account Overview
@@ -284,8 +283,8 @@ $client->getCustomerSession([
 ```
 ```json
 {
-    prim_uid: 6690,
-    access_token: "Access Token"
+    "prim_uid": 6690,
+    "access_token": "Access Token"
 }
 ```
 #####15.Destroy Customer Session
@@ -296,7 +295,7 @@ $client->destroyCustomerSession([
 ```
 ```json
 {
-    success: true
+    "success": true
 }
 ```
 #####16.List Suppliers
@@ -306,15 +305,14 @@ $client->->listSuppliers()
 ```json
 [
     {
-        prim_uid: 2568,
-        name: "1&1 - Versatel (Business-Kunden)",
-        created: "2018-02-12 12:52:38",
-        supplier_login_url: "https://online-rechnung.versatel.de/tb/telcobill.faces",
-        supplier_logo_url: "https://portal-ui-images.s3.eu-central-1.amazonaws.com/logo/120x120/25206.jpg",
-        document_type: "invoice",
-        quick_feedback_supported: false
-    },
-    ...
+        "prim_uid": 2568,
+        "name": "1&1 - Versatel (Business-Kunden)",
+        "created": "2018-02-12 12:52:38",
+        "supplier_login_url": "https://online-rechnung.versatel.de/tb/telcobill.faces",
+        "supplier_logo_url": "https://portal-ui-images.s3.eu-central-1.amazonaws.com/logo/120x120/25206.jpg",
+        "document_type": "invoice",
+        "quick_feedback_supported": false
+    }
 ]
 ```
 #####17.Create Customer Supplier
@@ -331,10 +329,12 @@ $client->createCustomerSupplier([
 ```json
 {
     "success": true,
-    "customer_supplier_prim_uid": 13,
+    "customer_supplier_prim_uid": 13
 }
 
+```
 If quick_feedback parameter is set as true
+```json
 
 {
     "success": true,
@@ -350,7 +350,7 @@ $client->deleteCustomerSupplier([
 ```
 ```json
 {
-    success: true
+    "success": true
 }
 ```
 #####19.List Customer Suppliers
@@ -391,7 +391,7 @@ $client->updateCustomerSupplier([
 ```
 ```json
 {
-    success: true
+    "success": true
 }
 ```
 #####21.Get Supplier Fields
